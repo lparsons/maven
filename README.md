@@ -15,8 +15,8 @@ Travis: [![Travis Build Status](https://travis-ci.org/eugenemel/maven.svg?branch
 
 ## Make distributable package
 
-    make INSTALL_ROOT=appdir install
-    make_dist_[platform].sh src/maven/appdir/bin/[executable]
+    make install
+    make_dist_[platform].sh src/maven/bin/[executable]
 
 
 *platform* is one of `win32`, `osx`, or `linux`

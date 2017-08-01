@@ -25,10 +25,10 @@ script:
 - export GIT_VERSION=$(git describe --tags --always)
 - qmake -r
 - make -j2
-- make INSTALL_ROOT=appdir install
-- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./make_dist_linux.sh "src/maven/appdir/bin/Maven"*;
+- make install
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./make_dist_linux.sh "src/maven/bin/Maven";
   fi
-- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./make_dist_osx.sh "src/maven/appdir/bin/Maven"*".app";
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./make_dist_osx.sh "src/maven/bin/Maven.app";
   fi
 - ls -la dist/
 deploy:

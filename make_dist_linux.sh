@@ -13,7 +13,7 @@ REV=`tput smso`
 function HELP {
     echo -e \\n"${REV}Basic usage:${NORM} ${BOLD}$SCRIPT file.exe${NORM}"\\n
     echo -e "${REV}-h${NORM}  --Displays this help message. No further functions are performed."\\n
-    echo -e "Example: ${BOLD}$SCRIPT \"appdir/bin/Maven_Linux\"${NORM}"\\n
+    echo -e "Example: ${BOLD}$SCRIPT \"bin/Maven_Linux\"${NORM}"\\n
     exit 1
 }
 
@@ -45,7 +45,7 @@ binfn="${binpath##*/}"
 distpath="dist"
 appimagefn="${binfn%.exe}_${GIT_VERSION}-Linux.AppImage"
 
-# TODO Resources must be copied to appdir prior to packaging
+# TODO Resources must be copied to bin dir prior to packaging
 # See: RedTimer example at https://github.com/probonopd/linuxdeployqt/wiki
 #echo "Copying resources to ${apppath}"
 #mkdir -p "${apppath}/Contents/Resources/methods"

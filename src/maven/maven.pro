@@ -5,18 +5,16 @@ CONFIG += qt thread sql svg console std++14
 QMAKE_STRIP=echo
 #PRECOMPILED_HEADER  = stable.h
 
-
 target.path =  $${INSTALL_PREFIX}/bin
 desktop.path = $${INSTALL_PREFIX}/share/applications
 desktop.files = maven.desktop
+TARGET = Maven
 
 #add version information during compilation
 #VERSION = $$system("git describe --tags --always")
 include(gitversion.pri)
 DEFINES += MAVEN_VERSION=\\\"$$VERSION\\\"
 DEFINES += "PLATFORM=\"$$QMAKE_HOST.os\""
-
-TARGET = Maven
 
 RC_FILE = mzroll.rc
 RESOURCES +=  mzroll.qrc
